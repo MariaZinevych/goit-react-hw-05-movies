@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-export const MoviesList = ({ films }) => {
+const MoviesList = ({ films }) => {
   return (
     <ul>
       {films.map(film => (
@@ -10,3 +10,4 @@ export const MoviesList = ({ films }) => {
     </ul>
   );
 };
+export default MoviesList;

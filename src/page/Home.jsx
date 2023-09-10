@@ -1,9 +1,9 @@
 import { fetchTrending } from 'API';
-import { MoviesList } from 'components/MoviesList';
-import { Loader } from 'components/loader';
+import MoviesList from 'components/MoviesList';
+import Loader from 'components/loader';
 import { useEffect, useState } from 'react';
 
-export const Home = () => {
+const Home = () => {
   const [films, setFilms] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -33,3 +33,4 @@ export const Home = () => {
     </main>
   );
 };
+export default Home;

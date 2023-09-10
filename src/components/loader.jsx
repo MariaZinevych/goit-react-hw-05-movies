@@ -1,6 +1,6 @@
 import { Blocks } from 'react-loader-spinner';
 
-export const Loader = () => {
+const Loader = () => {
   return (
     <Blocks
       visible={true}
@@ -12,3 +12,4 @@ export const Loader = () => {
     />
   );
 };
+export default Loader;
