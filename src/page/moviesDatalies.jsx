@@ -47,7 +47,11 @@ const MoviesDetalies = () => {
       {loading && <Loader />}
       {movieInfo && (
         <div>
-          <img width="300px" src={poster_path} alt={original_title} />
+          <img
+            width="300px"
+            src={poster_path && `https://image.tmdb.org/t/p/w500${poster_path}`}
+            alt={original_title}
+          />
           <div>
             <h1>
               {title} ({release_date.slice(0, 4)})

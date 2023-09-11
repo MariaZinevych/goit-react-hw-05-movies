@@ -34,7 +34,14 @@ const Cast = () => {
       <ul>
         {actors.map(({ id, profile_path, original_name, name, character }) => (
           <li key={id}>
-            <img width="200px" src={profile_path} alt={original_name} />
+            <img
+              width="200px"
+              src={
+                profile_path &&
+                ` https://image.tmdb.org/t/p/w500${profile_path}`
+              }
+              alt={original_name}
+            />
             <p>{name}</p>
             <p>Character: {character}</p>
           </li>
