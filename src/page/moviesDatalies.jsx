@@ -24,6 +24,7 @@ const MoviesDetalies = () => {
     };
     MoviesDetaliesfilms();
   }, [movieId]);
+
   if (!movieInfo) {
     return;
   }
@@ -40,7 +41,7 @@ const MoviesDetalies = () => {
 
   return (
     <>
-      <Link>
+      <Link to="/">
         <button type="button">Go back</button>
       </Link>
       {loading && <Loader />}

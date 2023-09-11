@@ -8,11 +8,6 @@ export const fetchTrending = async () => {
   return response.data.results;
 };
 
-export const fetchMoviesId = async () => {
-  const response = await axios.get(`movie/{movie_id}?api_key=${API_KEY}`);
-  return response.data.results;
-};
-
 export const fetchMovieDetails = async movieId => {
   const response = await axios.get(
     `movie/${movieId}?api_key=${API_KEY}&language=en-US`
