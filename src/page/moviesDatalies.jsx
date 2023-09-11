@@ -1,4 +1,5 @@
 import { fetchMovieDetails } from 'API';
+import { But } from 'components/Form.styled';
 import Loader from 'components/loader';
 import { useEffect, useState } from 'react';
 import { Link, Outlet, useParams } from 'react-router-dom';
@@ -42,7 +43,7 @@ const MoviesDetalies = () => {
   return (
     <>
       <Link to="/">
-        <button type="button">Go back</button>
+        <But type="button">Go back</But>
       </Link>
       {loading && <Loader />}
       {movieInfo && (

@@ -2,6 +2,7 @@ import { fetchActors } from 'API';
 import Loader from 'components/loader';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { List } from './Cast.styled';
 
 const Cast = () => {
   const { movieId } = useParams();
@@ -31,7 +32,7 @@ const Cast = () => {
     <div>
       {loading && <Loader />}
 
-      <ul>
+      <List>
         {actors.map(({ id, profile_path, original_name, name, character }) => (
           <li key={id}>
             <img
@@ -46,7 +47,7 @@ const Cast = () => {
             <p>Character: {character}</p>
           </li>
         ))}
-      </ul>
+      </List>
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { But, FormList, Input } from './Form.styled';
 
 const Form = ({ searchMovies }) => {
   const [query, setQuery] = useState('');
@@ -13,16 +14,16 @@ const Form = ({ searchMovies }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
+    <FormList onSubmit={handleSubmit}>
+      <Input
         type="text"
         name="query"
         autoFocus
         value={query}
         onChange={handleInputChange}
       />
-      <button type="submit">Search</button>
-    </form>
+      <But type="submit">Search</But>
+    </FormList>
   );
 };
 export default Form;
