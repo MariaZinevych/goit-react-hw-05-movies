@@ -22,13 +22,11 @@ export const But = styled.button`
 `;
 
 export const Input = styled.input`
-  display: inline-block;
-  width: 5cm;
-  font: inherit;
-  font-size: 20px;
+  font-size: 1rem;
+  padding: 8px 32px 8px 8px;
+  width: 250px;
+  background-color: transparent;
   border: none;
+  border-bottom: 2px solid #064e8a;
   outline: none;
-  padding-left: 4px;
-  padding-right: 4px;
-  background: gray;
 `;

@@ -1,28 +1,17 @@
-import { useState } from 'react';
-import { But, FormList, Input } from './Form.styled';
+import { FormList, Input } from './Form.styled';
 
-const Form = ({ searchMovies }) => {
-  const [query, setQuery] = useState('');
-
-  const handleInputChange = event => {
-    setQuery(event.target.value);
-  };
-
-  const handleSubmit = event => {
-    event.preventDefault();
-    searchMovies(query.toLowerCase());
+const Form = ({ value, onChange }) => {
+  const handleSubmit = e => {
+    e.preventDefault();
   };
 
   return (
     <FormList onSubmit={handleSubmit}>
       <Input
         type="text"
-        name="query"
-        autoFocus
-        value={query}
-        onChange={handleInputChange}
+        value={value}
+        onChange={e => onChange(e.target.value)}
       />
-      <But type="submit">Search</But>
     </FormList>
   );
 };
