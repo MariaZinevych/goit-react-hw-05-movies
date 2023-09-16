@@ -68,11 +68,12 @@ const MoviesDetalies = () => {
             <h2>Overview</h2>
             <p>{overview}</p>
             <h2>Genres</h2>
-            <li>
+
+            <ul>
               {genres.map(genre => (
                 <li key={genre.id}>{genre.name}</li>
               ))}
-            </li>
+            </ul>
           </div>
         </div>
       )}
@@ -83,10 +84,13 @@ const MoviesDetalies = () => {
           <li>
             <Link to="cast">Cast</Link>
           </li>
+        </ul>
+        <ul>
           <li>
             <Link to="reviews">Reviews</Link>
           </li>
         </ul>
+
         <hr />
         <Outlet />
       </div>
