@@ -38,8 +38,9 @@ const Cast = () => {
             <img
               width="200px"
               src={
-                profile_path &&
-                ` https://image.tmdb.org/t/p/w500${profile_path}`
+                profile_path
+                  ? `https://image.tmdb.org/t/p/w500${profile_path}`
+                  : `https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg`
               }
               alt={original_name}
             />

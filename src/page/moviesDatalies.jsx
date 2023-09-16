@@ -1,13 +1,16 @@
 import { fetchMovieDetails } from 'API';
 import { But } from 'components/Form.styled';
 import Loader from 'components/loader';
+import { useRef } from 'react';
 import { useEffect, useState } from 'react';
-import { Link, Outlet, useParams } from 'react-router-dom';
+import { Link, Outlet, useParams, useLocation } from 'react-router-dom';
 
 const MoviesDetalies = () => {
   const { movieId } = useParams();
   const [movieInfo, setMovieInfo] = useState(null);
   const [loading, setLoading] = useState(false);
+  const location = useLocation();
+  const linkbank = useRef(location.state?.from ?? '/movies');
 
   useEffect(() => {
     const MoviesDetaliesfilms = () => {
@@ -42,7 +45,7 @@ const MoviesDetalies = () => {
 
   return (
     <>
-      <Link to="/">
+      <Link to={linkbank.current}>
         <But type="button">Go back</But>
       </Link>
       {loading && <Loader />}
@@ -50,7 +53,11 @@ const MoviesDetalies = () => {
         <div>
           <img
             width="300px"
-            src={poster_path && `https://image.tmdb.org/t/p/w500${poster_path}`}
+            src={
+              poster_path
+                ? `https://image.tmdb.org/t/p/w500${poster_path}`
+                : `https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg`
+            }
             alt={original_title}
           />
           <div>
