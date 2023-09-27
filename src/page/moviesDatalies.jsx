@@ -1,6 +1,6 @@
 import { fetchMovieDetails } from 'API';
-import { But } from 'components/Form.styled';
-import Loader from 'components/loader';
+import { But } from 'components/Form/Form.styled';
+import Loader from 'components/Loader/loader';
 import { useRef } from 'react';
 import { useEffect, useState } from 'react';
 import { Link, Outlet, useParams, useLocation } from 'react-router-dom';

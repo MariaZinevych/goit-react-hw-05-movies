@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 export const FormList = styled.form`
   display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 10px;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0 16px;
+  flex-wrap: wrap;
 `;
 
 export const But = styled.button`

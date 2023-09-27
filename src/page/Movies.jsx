@@ -1,8 +1,8 @@
 import { fetchSearchByKeyword } from 'API';
-import MoviesList from 'components/MoviesList';
-import Loader from 'components/loader';
+import MoviesList from 'components/MovieList/MoviesList';
+import Loader from 'components/Loader/loader';
 import { useState, useEffect } from 'react';
-import Form from 'components/Form';
+import Form from 'components/Form/Form';
 import { useSearchParams } from 'react-router-dom';
 
 const Movies = () => {

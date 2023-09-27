@@ -1,6 +1,6 @@
 import { fetchTrending } from 'API';
-import MoviesList from 'components/MoviesList';
-import Loader from 'components/loader';
+import MoviesList from 'components/MovieList/MoviesList';
+import Loader from 'components/Loader/loader';
 import { useEffect, useState } from 'react';
 
 const Home = () => {

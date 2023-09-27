@@ -1,5 +1,5 @@
 import { fetchActors } from 'API';
-import Loader from 'components/loader';
+import Loader from 'components/Loader/loader';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { List } from './Cast.styled';
