@@ -4,6 +4,7 @@ import Loader from 'components/Loader/loader';
 import { useRef } from 'react';
 import { useEffect, useState } from 'react';
 import { Link, Outlet, useParams, useLocation } from 'react-router-dom';
+import { Container } from './moviesDatalies.staled';
 
 const MoviesDetalies = () => {
   const { movieId } = useParams();
@@ -44,7 +45,7 @@ const MoviesDetalies = () => {
   } = movieInfo || {};
 
   return (
-    <>
+    <Container>
       <Link to={linkbank.current}>
         <But type="button">Go back</But>
       </Link>
@@ -52,7 +53,7 @@ const MoviesDetalies = () => {
       {movieInfo && (
         <div>
           <img
-            width="300px"
+            width="400px"
             src={
               poster_path
                 ? `https://image.tmdb.org/t/p/w500${poster_path}`
@@ -94,7 +95,7 @@ const MoviesDetalies = () => {
         <hr />
         <Outlet />
       </div>
-    </>
+    </Container>
   );
 };
 
